@@ -41,7 +41,7 @@ if [ "$?" = 1 ]; then
   PASS_UNIT=false
 fi
 
-if [ $PASS = false ] && [ $PASS_UNIT = false ]; then
+if [ $PASS = false ] || [ $PASS_UNIT = false ]; then
   echo "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass PHPCS but do not. Please fix the PHPCS errors and try again.\n"
   exit 1
 else
