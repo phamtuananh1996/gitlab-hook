@@ -14,6 +14,6 @@ class HomeController extends Controller
      */
     public function __invoke()
     {
-        return User::findOrFail(23);
+        return 1;
     }
 }
